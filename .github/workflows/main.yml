@@ -14,10 +14,9 @@ jobs:
       - name: Build PDF
         uses: docker://sphinxdoc/sphinx-latexpdf
         with:
-          args: sphinx-build -M latexpdf source build
+          args: make latexpdf
         env:
           LANG: C.UTF-8
-          SPHINXOPTS: -t pdf
       
       - run: ls -l build/latex
 
