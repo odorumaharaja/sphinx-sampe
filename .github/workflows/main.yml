@@ -17,11 +17,17 @@ jobs:
           args: make latexpdf
         env:
           LANG: C.UTF-8
-      
-      - run: ls -l build/latex
 
       - name: Archive PDF artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: index.pdf
           path: build/latex/testproject.pdf
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: index.pdf
+      
+      - name: Display structure of downloaded files
+        run: ls -R
