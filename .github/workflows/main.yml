@@ -9,10 +9,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: "main"
+      - uses: actions/checkout@v3
     
       - name: Build PDF
         uses: docker://sphinxdoc/sphinx-latexpdf
@@ -22,6 +19,8 @@ jobs:
           LANG: C.UTF-8
           SPHINXOPTS: -t pdf
       
+      - run: ls -l build/latex
+
       - name: Archive PDF artifacts
         uses: actions/upload-artifact@v2
         with:
