@@ -25,3 +25,8 @@ language = 'ja'
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+
+
+latex_documents = [
+    ('index.rst', 'index', "Sample Page", "HogeHoge")
+]
