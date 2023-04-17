@@ -57,12 +57,6 @@ TODOも拡張モジュール ``sphinx.ext.todo`` を有効にすると記述で�
     [extensions]
     todo_include_todos = True
 
-.. todo::
-
-    これは TODO なので、後ほど調査する
-
-TODOを表示する場所も選ぶことができます。今回は index ページに記載しておきましょう。表示させたい場所に ``` .. todolist:: ``` と記述しておけばよいです。
-
 .. code-block:: rest
 
     .. sample-project documentation master file, created by
