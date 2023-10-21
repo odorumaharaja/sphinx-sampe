@@ -1,2 +1,4 @@
 # sphinx-sampe
-Sphinx sample
+
+https://odorumaharaja.github.io/sphinx-sample/
+
